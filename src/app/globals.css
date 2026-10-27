@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-fraunces), "Georgia", serif;
+  --font-sans: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --color-cream-50: #fbf8f1;
+  --color-cream-100: #f4eedf;
+  --color-cream-200: #e9dfc8;
+  --color-cream-300: #d9ccab;
+
+  --color-forest-50: #edf6f0;
+  --color-forest-100: #dcede2;
+  --color-forest-200: #b5dcc6;
+  --color-forest-300: #7fc09b;
+  --color-forest-600: #1f7a4a;
+  --color-forest-700: #17603a;
+  --color-forest-800: #124d30;
+  --color-forest-900: #0e3b25;
+  --color-forest-950: #08281a;
+
+  --color-gold-100: #fbeed2;
+  --color-gold-300: #f2cf7a;
+  --color-gold-400: #e9b33c;
+  --color-gold-500: #de9e12;
+  --color-gold-600: #b57a08;
+  --color-gold-700: #8f5f06;
+
+  --color-clay-500: #c4552b;
+  --color-clay-600: #a5441f;
+
+  --color-ink-900: #1c2a21;
+  --color-ink-700: #33453a;
+  --color-ink-600: #46584c;
+  --color-ink-400: #7a8a7e;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-ink-900 antialiased;
+  }
+  ::selection {
+    background: var(--color-gold-300);
+    color: var(--color-forest-950);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 2px;
+  }
+}
+
+/* Thin, calm scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-cream-300) transparent;
+}
